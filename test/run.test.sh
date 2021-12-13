@@ -1,0 +1,1 @@
+ball6 sample_sub_fpkm.txt ./output/sample
