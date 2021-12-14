@@ -1,1 +1,1 @@
-ball6 sample_sub_fpkm.txt ./output/sample
+../ball6 -i sample_sub_fpkm.txt -o ./output -m sample

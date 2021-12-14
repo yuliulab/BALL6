@@ -21,6 +21,9 @@ from tensorflow.keras import models
 ids=str(sys.argv[1])
 outprefix=str(sys.argv[2])
 
+scriptdir=os.path.abspath(__file__)
+scriptdir=os.path.split(scriptdir)[0]
+
 outdir=os.path.split(outprefix)[0]
 outmark=os.path.split(outprefix)[1]
 if outdir == '':
@@ -41,20 +44,20 @@ modelmark = 'mode210917_ballrank_01'
 
 ## LOAD DATASET
 ## gene sel
-with open('/root/modesave/dict_idx2gene_'+ modelmark+'.json', 'r') as json_file:
+with open(scriptdir + '/modesave/dict_idx2gene_'+ modelmark+'.json', 'r') as json_file:
     idx2gene = json.load(json_file)
 
-with open('/root/modesave/dict_gene2idx_'+ modelmark+'.json', 'r') as json_file:
+with open(scriptdir + '/modesave/dict_gene2idx_'+ modelmark+'.json', 'r') as json_file:
     gene2idx = json.load(json_file)
 
-with open('/root/modesave/dict_idx2subtype_'+ modelmark+'.json', 'r') as json_file:
+with open(scriptdir + '/modesave/dict_idx2subtype_'+ modelmark+'.json', 'r') as json_file:
     idx2subtype = json.load(json_file)
 
-with open('/root/modesave/dict_subtype2idx_'+ modelmark+'.json', 'r') as json_file:
+with open(scriptdir + '/modesave/dict_subtype2idx_'+ modelmark+'.json', 'r') as json_file:
     subtype2idx = json.load(json_file)
 
 ## model load
-model = models.load_model('/root/modesave/'+ modelmark + '.h5')
+model = models.load_model(scriptdir + '/modesave/'+ modelmark + '.h5')
 
 def readfpkm(fpkmfile):
     fpkm = pd.read_table(fpkmfile)
@@ -160,6 +163,6 @@ pydf_m = pydf_m.append(pydf)
 
 out = outdir+'/pydf_ball_'+outmark+'.tab'
 pydf_m.to_csv(out, sep='\t', header=0)
-os.chmod(out,stat.S_IRWXO+stat.S_IRWXG+stat.S_IRWXU)
+#os.chmod(out,stat.S_IRWXO+stat.S_IRWXG+stat.S_IRWXU)
 #pydf_m.to_excel('pydf_merge_20210817.xls')
 

@@ -27,7 +27,7 @@ chmod +x ball6
 ##### Run test
 ```shell
 cd test
-../ball6 -i sample_sub_fpkm.txt -o ./output -m test
+../ball6 -i sample_sub_fpkm.txt -o ./output -m sample
 ```
 
 ### USEAGE

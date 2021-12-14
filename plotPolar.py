@@ -80,5 +80,5 @@ c = (
     # .set_global_opts(title_opts=opts.TitleOpts(title=outmark))
     .render(outdir + "/polar_al_" + outmark + ".html")
 )
-os.chmod(outdir + "/polar_al_" + outmark + ".html",
-    stat.S_IRWXO+stat.S_IRWXG+stat.S_IRWXU)
+# os.chmod(outdir + "/polar_al_" + outmark + ".html",
+#     stat.S_IRWXO+stat.S_IRWXG+stat.S_IRWXU)
