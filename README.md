@@ -1,4 +1,4 @@
-![image-20211214132216676](https://github.com/yuliulab/BALL6/tree/main//pic/web-banner.png)
+![image-20211214132216676](https://github.com/yuliulab/BALL6/blob/main/pic/web-banner.png?raw=true)
 
 BALL6 (B-cell Acute Leukemia Subtype Identification based on rank of eXpression): A deep learning tool for predicting AL and BALL subtypes based on the expression rank values of 455 selected genes.
 
