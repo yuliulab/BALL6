@@ -10,7 +10,7 @@ http://cccg.ronglian.com/#/analysis
 
 
 ### INSTALL
-#####  Install dependence
+#####  Install Dependence
 ```shell
 conda install python=3.9.1 libgcc-ng -c conda-forge
 conda install numpy=1.19.5 -c conda-forge
@@ -24,7 +24,7 @@ pip install pyecharts==1.9.0
 git clone https://github.com/yuliulab/BALL6.git
 chmod +x ball6
 ```
-##### Run test
+##### Run Test
 ```shell
 cd test
 ../ball6 -i sample_sub_fpkm.txt -o ./output -m sample
@@ -32,8 +32,10 @@ cd test
 
 ### USEAGE
 
-```shell
-BALL6 -i expression.tab [**-o** output_dir] [**-m** moutput_file_prefix]
+##### Command  Format
+
+```
+BALL6 -i expression.tab [-o output_dir] [-m moutput_file_prefix]
 
 -i  A gene expression table file with tab text file contain 2 columns at least.
     The first column is ENSEMBL ID, and the last column is genes expression value.  
@@ -53,11 +55,8 @@ There are two parts of the prediction results, representing the AL model and the
 
 The polar interactive plots are followed, indicating a visualization of the probability size in each subtype. If the subtype probability is bigger than 0.9, its polar bar will be shown in red, and the other bar colors will be dark grey.
 
-
-
->BALL6 **-i** expression.tab [**-o** output_dir] [**-m** moutput_file_prefix]  
->    **-i**  A gene expression table file with tab text file contain 2 columns at least.  
->         The first column is ENSEMBL ID, and the last column is genes expression value.  
->    **-o**  Path to output dir, defult './'  
->    **-m**  Prefix for output file, defult 'ball6'  
-
+### CONTECT US
+Liu Lab
+Shanghai Children’s Medical Center, Shanghai Jiao Tong University, China
+Bowen Cui: xcxiongmao@126.com
+Yu Liu: yu.liu@sjtu.edu.cn
