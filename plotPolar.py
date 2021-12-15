@@ -55,8 +55,8 @@ c = (
     # .set_global_opts(title_opts=opts.TitleOpts(title=outmark))
     .render(outdir + "/polar_ball_" + outmark + ".html")
 )
-os.chmod(outdir + "/polar_ball_" + outmark + ".html",
-    stat.S_IRWXO+stat.S_IRWXG+stat.S_IRWXU)
+# os.chmod(outdir + "/polar_ball_" + outmark + ".html",
+#     stat.S_IRWXO+stat.S_IRWXG+stat.S_IRWXU)
 
 
 data = pd.read_table(outdir + "/pydf_al_" + outmark + ".tab")

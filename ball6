@@ -18,8 +18,8 @@ do
     echo -e "usage: \e[1;34mBALL6 \e[1;33m-i \e[1;0mexpression.tab [\e[1;33m-o \e[1;0moutput_dir] [\e[1;33m-m \e[1;0mmoutput_file_prefix]"
 
     echo -e "  \e[1;33m-i \e[1;0m A gene expression table file with tab text file contain 2 columns at least.\n      The first column is ENSEMBL ID, and the last column is genes expression value."
-    echo -e "  \e[1;33m-o \e[1;0m Path to output dir, defult './'"
-    echo -e "  \e[1;33m-m \e[1;0m Prefix for output file, defult 'ball6'"
+    echo -e "  \e[1;33m-o \e[1;0m Path to output dir, default './'"
+    echo -e "  \e[1;33m-m \e[1;0m Prefix for output file, default 'ball6'"
 
     exit 1;;
   esac
