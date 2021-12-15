@@ -69,6 +69,8 @@ The polar interactive plots are followed, indicating a visualization of the prob
 
 [Here](https://github.com/yuliulab/BALL6/blob/main/test/output/pydf_ball_sample.tab) is an example output `/test/output/`. Subtype predict probability was saved in the table and visualized as polar plots:
 
+<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png' align="right" width='400px'>
+
 | PredSubtype | TCF3PBX1 (0.9979) |
 | ----------- | ----------------- |
 | BCRABL1     | 0.0001            |
@@ -86,10 +88,12 @@ The polar interactive plots are followed, indicating a visualization of the prob
 | TCF3PBX1    | 0.9979            |
 | ZNF384      | 0                 |
 
-<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png' align="right" width='400px'>
+
 
 # CONTACT US
-Liu Lab
+If there are any questions in BALL6, feel free to contact us or [create an issue](https://github.com/yuliulab/BALL6/issues).
+
+**[Liu Lab](https://yuliulab.github.io/)**
 
 Shanghai Children’s Medical Center, Shanghai Jiao Tong University, China
 
