@@ -9,11 +9,11 @@ http://cccg.ronglian.com/#/analysis
 
 
 
-### INSTALL
+# INSTALL
 
 We recommend installing BALL6 with conda. *If you don't have conda, see help installing conda [here](https://conda.io/en/latest/miniconda.html).*
 
-#####  Install Dependence
+###  Install Dependence
 ```shell
 conda create --name ball6 python=3.9.1 libgcc-ng -c conda-forge
 source activate ball6
@@ -24,13 +24,13 @@ conda install tensorflow=2.6.0 -c conda-forge
 conda install grpcio=1.39.0 -c conda-forge
 pip install pyecharts==1.9.0
 ```
-##### Install BALL6
+### Install BALL6
 ```shell
 git clone https://github.com/yuliulab/BALL6.git
 cd BALL6
 chmod +x ball6
 ```
-##### Run Test
+### Run Test
 
 We provide an example gene expression input file `/test/sample_sub_fpkm.txt`, and its results are also provided in `test/output/`. Users can reproduce the results with the following command:
 
@@ -40,9 +40,9 @@ alias ball6="PATH_TO_BALL6/ball6"
 ball6 -i sample_sub_fpkm.txt -o ./output -m sample
 ```
 
-### USAGE
+# USAGE
 
-##### Command  Format
+### Command  Format
 
 ```
 BALL6 -i expression.tab [-o output_dir] [-m moutput_file_prefix]
@@ -53,7 +53,7 @@ BALL6 -i expression.tab [-o output_dir] [-m moutput_file_prefix]
 -m  Prefix for output file, default 'ball6'  
 ```
 
-##### Input Requirement
+### Input Requirement
 In brief, the only input BALL6 required is the 455 genes expression table with **tab-separated**. The first column in the table should be the Ensembl gene ID, and the last column should be gene expression values or rank values.
 
 The BALL6 only requires 229 genes for the AL model and 271 genes for the BALL model, the program will ignore other genes in the user’s input, and if there are some genes not in the input, the program will set its values to 0.
@@ -62,7 +62,7 @@ If the input file has the Ensembl version suffix in the first column, the progra
 
 An example input is provided in [here](https://github.com/yuliulab/BALL6/blob/main/test/sample_sub_fpkm.txt) `/test/sample_sub_fpkm.txt`, note that only the first and last columns are valid input.
 
-##### Results Explanation
+### Results Explanation
 There are two parts of the prediction results, representing the AL model and the BALL model, respectively. The prediction subtype and its probability are present in the table. The best prediction subtype is in the first row. All of the probabilities are rounded to four significant digits.
 
 The polar interactive plots are followed, indicating a visualization of the probability size in each subtype. If the subtype probability is bigger than 0.9, its polar bar will be shown in red, and the other bar colors will be dark grey.
@@ -86,9 +86,9 @@ The polar interactive plots are followed, indicating a visualization of the prob
 | TCF3PBX1    | 0.9979            |
 | ZNF384      | 0                 |
 
-<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png' width='400px'>
+<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png' align="right" width='400px'>
 
-### CONTACT US
+# CONTACT US
 Liu Lab
 
 Shanghai Children’s Medical Center, Shanghai Jiao Tong University, China
