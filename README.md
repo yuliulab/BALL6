@@ -66,7 +66,7 @@ There are two parts of the prediction results, representing the AL model and the
 
 The polar interactive plots are followed, indicating a visualization of the probability size in each subtype. If the subtype probability is bigger than 0.9, its polar bar will be shown in red, and the other bar colors will be dark grey.
 
-[Here](https://github.com/yuliulab/BALL6/blob/main/test/output/pydf_ball_sample.tab) is an example output `/test/output/`. Subtype predict probability was saved in the table and visualized as polar plots.
+[Here](https://github.com/yuliulab/BALL6/blob/main/test/output/pydf_ball_sample.tab) is an example output `/test/output/`. Subtype predict probability was saved in the table and visualized as polar plots:
 
 | PredSubtype | TCF3PBX1 (0.9979) |
 | ----------- | ----------------- |
@@ -85,7 +85,7 @@ The polar interactive plots are followed, indicating a visualization of the prob
 | TCF3PBX1    | 0.9979            |
 | ZNF384      | 0                 |
 
-[polar-example](https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png?raw=true)
+![polar-example](https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png?raw=true)
 
 ### CONTACT US
 Liu Lab
