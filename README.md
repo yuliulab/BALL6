@@ -85,9 +85,7 @@ The polar interactive plots are followed, indicating a visualization of the prob
 | TCF3PBX1    | 0.9979            |
 | ZNF384      | 0                 |
 
-![polar-example](https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png?raw=true)
-
-<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png' width='300px'>
+<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png' width='400px'>
 
 ### CONTACT US
 Liu Lab
