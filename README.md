@@ -1,4 +1,4 @@
-# BALL6: 
+# BALL6
 
 ![image-20211214132216676](https://github.com/yuliulab/BALL6/blob/main/docs/web-banner.png?raw=true)
 
