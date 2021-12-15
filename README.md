@@ -95,10 +95,8 @@ The polar interactive plots are followed, indicating a visualization of the prob
 # CONTACT US
 If there are any questions in BALL6, feel free to contact us or [create an issue](https://github.com/yuliulab/BALL6/issues).
 
-**[Liu Lab](https://yuliulab.github.io/)**
+> **[Liu Lab](https://yuliulab.github.io/)**  
+> Shanghai Children’s Medical Center, Shanghai Jiao Tong University, China  
+> Bowen Cui: xcxiongmao@126.com  
+> Yu Liu: yu.liu@sjtu.edu.cn
 
-Shanghai Children’s Medical Center, Shanghai Jiao Tong University, China
-
-Bowen Cui: xcxiongmao@126.com 
-
-Yu Liu: yu.liu@sjtu.edu.cn
