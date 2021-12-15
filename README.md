@@ -87,6 +87,8 @@ The polar interactive plots are followed, indicating a visualization of the prob
 
 ![polar-example](https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png?raw=true)
 
+<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png' width='300px'>
+
 ### CONTACT US
 Liu Lab
 Shanghai Children’s Medical Center, Shanghai Jiao Tong University, China
