@@ -36,7 +36,8 @@ We provide an example gene expression input file `/test/sample_sub_fpkm.txt`, an
 
 ```shell
 cd test
-../ball6 -i sample_sub_fpkm.txt -o ./output -m sample
+alias ball6="PATH_TO_BALL6/ball6"
+ball6 -i sample_sub_fpkm.txt -o ./output -m sample
 ```
 
 ### USAGE
@@ -89,6 +90,9 @@ The polar interactive plots are followed, indicating a visualization of the prob
 
 ### CONTACT US
 Liu Lab
+
 Shanghai Children’s Medical Center, Shanghai Jiao Tong University, China
-Bowen Cui: xcxiongmao@126.com
+
+Bowen Cui: xcxiongmao@126.com 
+
 Yu Liu: yu.liu@sjtu.edu.cn

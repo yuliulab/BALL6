@@ -63,9 +63,9 @@ echo 'Visit our online tool http://cccg.ronglian.com/#/analysis'
 mkdir -p ${OUTPUT%/*}/
 
 echo 'Running AL Model' && \
-echo 'Running AL Model' >> ${LOGFILE} && \
+echo 'Running AL Model' > ${LOGFILE} && \
 python ${WORKDIR}/pred_al.py ${FILE} $OUTPUT \
-  1> ${LOGFILE} \
+  1>> ${LOGFILE} \
   2> ${ERRFILE} && \
 echo 'Running BALL Model' && \
 echo 'Running BALL Model' >> ${LOGFILE} && \
