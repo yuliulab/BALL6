@@ -7,7 +7,7 @@ BALL6 (B-cell Acute Leukemia Subtype Identification based on rank of eXpression)
 
 Visit our online tool
 
-http://cccg.ronglian.com/#/analysis
+https://cccg.ronglian.com/#/analysis
 
 
 
