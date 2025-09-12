@@ -1,0 +1,23 @@
+{
+    "DUX4": 0,
+    "ETV6::RUNX1": 1,
+    "ETV6::RUNX1-like": 2,
+    "HLF": 3,
+    "HYPER": 4,
+    "HYPO": 5,
+    "IAMP21": 6,
+    "IKZF1 N159Y": 7,
+    "KMT2A": 8,
+    "MEF2D": 9,
+    "MEIS1::FOXO1": 10,
+    "MYC": 11,
+    "NUTM1": 12,
+    "PAX5 P80R": 13,
+    "PAX5alt": 14,
+    "Ph": 15,
+    "Phlike": 16,
+    "TCF3::PBX1": 17,
+    "ZEB2/CEBP": 18,
+    "ZNF384": 19,
+    "ZNF384-like": 20
+}

@@ -38,6 +38,7 @@ if outmark == '':
 # print("output dir: " + outdir + '/')
 
 modelmark = 'mode210917_ballrank_01'
+modelmark = 'mode241224_ballrank_01'
 
 
 

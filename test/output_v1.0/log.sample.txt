@@ -1,0 +1,3 @@
+Running AL Model
+Running BALL Model
+DONE!

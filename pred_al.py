@@ -39,6 +39,7 @@ if outmark == '':
 
 
 modelmark = 'mode210922_alrank_01'
+modelmark = 'mode250123_alrank_01'
 
 
 

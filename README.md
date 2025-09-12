@@ -2,7 +2,7 @@
 
 ![image-20211214132216676](https://github.com/yuliulab/BALL6/blob/main/docs/web-banner.png?raw=true)
 
-BALL6 (B-cell Acute Leukemia Subtype Identification based on rank of eXpression): A deep learning tool for predicting AL and BALL subtypes based on the expression rank values of 455 selected genes.
+BALL6 (B-cell Acute Leukemia Subtype Identification based on rank of eXpression): A deep learning tool for predicting AL and BALL subtypes based on the expression rank values of 476 selected genes.
 
 
 Visit our online tool
@@ -56,9 +56,9 @@ BALL6 -i expression.tab [-o output_dir] [-m moutput_file_prefix]
 ```
 
 ### Input Requirement
-In brief, the only input BALL6 required is the 455 genes expression table with **tab-separated**. The first column in the table should be the Ensembl gene ID, and the last column should be gene expression values or rank values.
+In brief, the only input BALL6 required is the 476 genes expression table with **tab-separated**. The first column in the table should be the Ensembl gene ID, and the last column should be gene expression values or rank values.
 
-The BALL6 only requires 229 genes for the AL model and 271 genes for the BALL model, the program will ignore other genes in the user’s input, and if there are some genes not in the input, the program will set its values to 0.
+The BALL6 only requires 229 genes for the AL model and 292 genes for the BALL model, the program will ignore other genes in the user’s input, and if there are some genes not in the input, the program will set its values to 0.
 
 If the input file has the Ensembl version suffix in the first column, the program will strip off the suffix automatically. BALL6 will convert the input gene expression to rank values, which will help the model to avoid batch effect among data sources. So, it’s don’t matter if the gene expression of your input is original values or not, but it’s important on the difference in values size between the genes. 
 
@@ -71,24 +71,33 @@ The polar interactive plots are followed, indicating a visualization of the prob
 
 [Here](https://github.com/yuliulab/BALL6/blob/main/test/output/pydf_ball_sample.tab) is an example output `/test/output/`. Subtype predict probability was saved in the table and visualized as polar plots:
 
-<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example.png' align="right" width='400px'>
+<img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example_v2.0.png' align="right" width='400px'>
 
-| PredSubtype | TCF3PBX1 (0.9979) |
-| ----------- | ----------------- |
-| BCRABL1     | 0.0001            |
-| DUX4IGH     | 0                 |
-| ETV6RUNX1   | 0                 |
-| HYPER       | 0                 |
-| IAMP21      | 0                 |
-| KMT2A       | 0.0007            |
-| LowHYPO     | 0                 |
-| MEF2D       | 0.0012            |
-| NearHaploid | 0                 |
-| PAX5        | 0                 |
-| PAX5P80R    | 0                 |
-| PHLIKE      | 0                 |
-| TCF3PBX1    | 0.9979            |
-| ZNF384      | 0                 |
+| PredSubtype      | ETV6::RUNX1 (0.9999) |
+| ---------------- | -------------------- |
+| DUX4             | 0                    |
+| ETV6::RUNX1      | 0.9999               |
+| ETV6::RUNX1-like | 0                    |
+| HLF              | 0                    |
+| HYPER            | 0                    |
+| HYPO             | 0                    |
+| IAMP21           | 0                    |
+| IKZF1 N159Y      | 0                    |
+| KMT2A            | 0                    |
+| MEF2D            | 0                    |
+| MEIS1::FOXO1     | 0                    |
+| MYC              | 0                    |
+| NUTM1            | 0                    |
+| PAX5 P80R        | 0                    |
+| PAX5alt          | 0                    |
+| Ph               | 0                    |
+| Phlike           | 0                    |
+| TCF3::PBX1       | 0                    |
+| ZEB2/CEBP        | 0                    |
+| ZNF384           | 0                    |
+| ZNF384-like      | 0                    |
+
+
 
 
 
