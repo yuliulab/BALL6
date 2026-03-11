@@ -32,6 +32,8 @@ git clone https://github.com/yuliulab/BALL6.git
 cd BALL6
 chmod +x ball6
 ```
+The model files `modesave/*.keras` are also available for download at [sjtu pan](https://pan.sjtu.edu.cn/web/share/9e3ba555f5500fa1ae117dc9471b1a56).
+
 ### Run Test
 
 We provide an example gene expression input file `/test/sample_sub_fpkm.txt`, and its results are also provided in `test/output/`. Users can reproduce the results with the following command:
@@ -85,7 +87,6 @@ The polar interactive plots are followed, indicating a visualization of the prob
 | IKZF1 N159Y      | 0                    |
 | KMT2A            | 0                    |
 | MEF2D            | 0                    |
-| MEIS1::FOXO1     | 0                    |
 | MYC              | 0                    |
 | NUTM1            | 0                    |
 | PAX5 P80R        | 0                    |
