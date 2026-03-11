@@ -51,8 +51,8 @@ ball6 -i sample_sub_fpkm.txt -o ./output -m sample
 ```
 BALL6 -i expression.tab [-o output_dir] [-m moutput_file_prefix]
 
--i  A gene expression table file with tab text file contain 2 columns at least.
-    The first column is ENSEMBL ID, and the last column is genes expression value.  
+-i  A gene expression table file with a tab-separated text file contain 2 columns at least.
+    The first column is ENSEMBL ID, and the last column is gene expression values.  
 -o  Path to output dir, default './'  
 -m  Prefix for output file, default 'ball6'  
 ```
@@ -60,18 +60,18 @@ BALL6 -i expression.tab [-o output_dir] [-m moutput_file_prefix]
 ### Input Requirement
 In brief, the only input BALL6 required is the 476 genes expression table with **tab-separated**. The first column in the table should be the Ensembl gene ID, and the last column should be gene expression values or rank values.
 
-The BALL6 only requires 229 genes for the AL model and 292 genes for the BALL model, the program will ignore other genes in the user’s input, and if there are some genes not in the input, the program will set its values to 0.
+The BALL6 only requires 229 genes for the AL model and 292 genes for the BALL model. The program will ignore other genes in the user’s input, and if there are some genes not in the input, the program will set their values to 0.
 
-If the input file has the Ensembl version suffix in the first column, the program will strip off the suffix automatically. BALL6 will convert the input gene expression to rank values, which will help the model to avoid batch effect among data sources. So, it’s don’t matter if the gene expression of your input is original values or not, but it’s important on the difference in values size between the genes. 
+If the input file has the Ensembl version suffix in the first column, the program will strip off the suffix automatically. BALL6 will convert the input gene expression to rank values, which will help the model to avoid batch effects among data sources. So, it doesn’t matter if the gene expression of your input is original values or not, but it’s important for the difference in value size between the genes. 
 
-An example input is provided in [here](https://github.com/yuliulab/BALL6/blob/main/test/sample_sub_fpkm.txt) `/test/sample_sub_fpkm.txt`, note that only the first and last columns are valid input.
+An example input is provided in [here](https://github.com/yuliulab/BALL6/blob/main/test/sample_sub_fpkm_v2.0.txt) `/test/sample_sub_fpkm_v2.0.txt`, note that only the first and last columns are valid input.
 
 ### Results Explanation
 There are two parts of the prediction results, representing the AL model and the BALL model, respectively. The prediction subtype and its probability are present in the table. The best prediction subtype is in the first row. All of the probabilities are rounded to four significant digits.
 
 The polar interactive plots are followed, indicating a visualization of the probability size in each subtype. If the subtype probability is bigger than 0.9, its polar bar will be shown in red, and the other bar colors will be dark grey.
 
-[Here](https://github.com/yuliulab/BALL6/blob/main/test/output/pydf_ball_sample.tab) is an example output `/test/output/`. Subtype predict probability was saved in the table and visualized as polar plots:
+[Here](https://github.com/yuliulab/BALL6/blob/main/test/output_v2.0/pydf_ball_ETV6.tab) is an example output `/test/output_v2.0/`. Subtype predict probability was saved in the table and visualized as polar plots:
 
 <img src='https://github.com/yuliulab/BALL6/blob/main/docs/polar-example_v2.0.png' align="right" width='400px'>
 
