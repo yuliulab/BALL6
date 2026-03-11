@@ -33,52 +33,68 @@ if outmark == '':
 # print("polar plot input: " + ids)
 
 # data = pd.read_table("./pyecharts/example_out/pydf_ball_sample1.tab", index_col=0)
-data = pd.read_table(outdir + "/pydf_ball_" + outmark + ".tab", index_col=0)
-data = pd.read_table(outdir + "/pydf_ball_" + outmark + ".tab")
+# data = pd.read_table(outdir + "/pydf_ball_" + outmark + ".tab", index_col=0)
+# subtype =ball_file = outdir + "/pydf_ball_" + outmark + ".tab"
 # subtype = data.columns.values.tolist()
 # value = data.iloc[0, :].tolist()
-subtype = data.iloc[:, 0].tolist()
-value = data.iloc[:, 1].tolist()
-
-value_bg = [i if i < cutoff else axis_min for i in value]
-value_fg = [i if i >= cutoff else axis_min for i in value]
-
-c = (
-    Polar()
-    # .add_schema(angleaxis_opts=opts.AngleAxisOpts(data=subtype, type_="category"))
-    .add_schema(
-        angleaxis_opts=opts.AngleAxisOpts(data=subtype, type_="category"),
-        radiusaxis_opts=opts.RadiusAxisOpts(type_="value", min_=axis_min, max_=axis_max))
-    # .add("", value, type_="bar", label_opts=opts.LabelOpts(is_show=False))
-    .add("", value_fg, type_="bar", label_opts=opts.LabelOpts(is_show=False), stack="a")
-    .add("", value_bg, type_="bar", label_opts=opts.LabelOpts(is_show=False), stack="a")
-    # .set_global_opts(title_opts=opts.TitleOpts(title=outmark))
-    .render(outdir + "/polar_ball_" + outmark + ".html")
-)
+# data = pd.read_table(outdir + "/pydf_ball_" + outmark + ".tab")
+# subtype = data.iloc[:, 0].tolist()
+# value = data.iloc[:, 1].tolist()
+# data = pd.read_table(outdir + "/pydf_ball_" + outmark + ".tab", header=0, index_col=0)
+ball_file = outdir + "/pydf_ball_" + outmark + ".tab"
+data = pd.read_table(ball_file, header=0, index_col=0,skiprows=[1]) # skip PredSubtype row
+subtype = data.index.tolist()
+for col in data.columns:
+    value = data[col].tolist()
+    value_bg = [i if i < cutoff else axis_min for i in value]
+    value_fg = [i if i >= cutoff else axis_min for i in value]
+    c = (
+        Polar()
+        # .add_schema(angleaxis_opts=opts.AngleAxisOpts(data=subtype, type_="category"))
+        .add_schema(
+            angleaxis_opts=opts.AngleAxisOpts(data=subtype, type_="category"),
+            radiusaxis_opts=opts.RadiusAxisOpts(type_="value", min_=axis_min, max_=axis_max))
+        # .add("", value, type_="bar", label_opts=opts.LabelOpts(is_show=False))
+        .add("", value_fg, type_="bar", label_opts=opts.LabelOpts(is_show=False), stack="a")
+        .add("", value_bg, type_="bar", label_opts=opts.LabelOpts(is_show=False), stack="a")
+        # .set_global_opts(title_opts=opts.TitleOpts(title=outmark))
+        # .render(outdir + "/polar_ball_" + outmark + ".html")
+    )
+    if len(data.columns) == 1:
+        c.render(outdir + "/polar_ball_" + outmark + ".html")
+    else:
+        c.render(outdir + "/polar_ball_" + outmark + "-" + str(col) + ".html")
 # os.chmod(outdir + "/polar_ball_" + outmark + ".html",
 #     stat.S_IRWXO+stat.S_IRWXG+stat.S_IRWXU)
 
 
-data = pd.read_table(outdir + "/pydf_al_" + outmark + ".tab")
-subtype = data.iloc[:, 0].tolist()
-for i in range(len(subtype)):
-    subtype.insert(2*i, '')
-value = data.iloc[:, 1].tolist()
-for i in range(len(value)):
-    value.insert(2*i, axis_min)
+al_file = outdir + "/pydf_al_" + outmark + ".tab"
+data = pd.read_table(al_file, header=0, index_col=0,skiprows=[1]) # skip PredSubtype row
+subtype_orig = data.index.tolist()
 
-value_bg = [i if i < cutoff else axis_min for i in value]
-value_fg = [i if i >= cutoff else axis_min for i in value]
-
-c = (
-    Polar()
-    .add_schema(
-        angleaxis_opts=opts.AngleAxisOpts(data=subtype, type_="category"), #boundary_gap=True
-        radiusaxis_opts=opts.RadiusAxisOpts(type_="value", min_=axis_min, max_=axis_max))
-    .add("", value_fg, type_="bar", label_opts=opts.LabelOpts(is_show=False), stack="a")
-    .add("", value_bg, type_="bar", label_opts=opts.LabelOpts(is_show=False), stack="a")
-    # .set_global_opts(title_opts=opts.TitleOpts(title=outmark))
-    .render(outdir + "/polar_al_" + outmark + ".html")
-)
+for col in data.columns:
+    subtype = subtype_orig.copy()
+    for i in range(len(subtype)):
+        subtype.insert(2*i, '')
+        
+    value = data[col].tolist()
+    for i in range(len(value)):
+        value.insert(2*i, axis_min)
+    value_bg = [i if i < cutoff else axis_min for i in value]
+    value_fg = [i if i >= cutoff else axis_min for i in value]
+    c = (
+        Polar()
+        .add_schema(
+            angleaxis_opts=opts.AngleAxisOpts(data=subtype, type_="category"), #boundary_gap=True
+            radiusaxis_opts=opts.RadiusAxisOpts(type_="value", min_=axis_min, max_=axis_max))
+        .add("", value_fg, type_="bar", label_opts=opts.LabelOpts(is_show=False), stack="a")
+        .add("", value_bg, type_="bar", label_opts=opts.LabelOpts(is_show=False), stack="a")
+        # .set_global_opts(title_opts=opts.TitleOpts(title=outmark))
+        # .render(outdir + "/polar_al_" + outmark + ".html")
+    )
+    if len(data.columns) == 1:
+        c.render(outdir + "/polar_al_" + outmark + ".html")
+    else:
+        c.render(outdir + "/polar_al_" + outmark + "-" + str(col) + ".html")
 # os.chmod(outdir + "/polar_al_" + outmark + ".html",
 #     stat.S_IRWXO+stat.S_IRWXG+stat.S_IRWXU)
