@@ -17,14 +17,14 @@ We recommend installing BALL6 with conda. *If you don't have conda, see help ins
 
 ###  Install Dependence
 ```shell
-conda create --name ball6 python=3.9.1 libgcc-ng -c conda-forge
+conda create --name ball6 python=3.12.0 libgcc-ng -c conda-forge
 source activate ball6
 
-conda install numpy=1.19.5 -c conda-forge
-conda install pandas=1.3.0
-conda install tensorflow=2.6.0 -c conda-forge
-conda install grpcio=1.39.0 -c conda-forge
-pip install pyecharts==1.9.0
+conda install numpy=1.26.4 -c conda-forge
+conda install pandas=2.2.3
+conda install tensorflow=2.17.0 -c conda-forge
+conda install grpcio=1.65.5 -c conda-forge
+pip install pyecharts==2.0.6
 ```
 ### Install BALL6
 ```shell
