@@ -9,7 +9,7 @@ Visit our online tool
 http://cccg.ronglian.com/#/analysis
 
 If you use BALL6, please cite:
-Cui, B., Sun, H., Zhao, S. et al. Deep learning based individualized cross-platform molecular subtype classification of B-lineage acute lymphoblastic leukemia. npj Precis. Onc. (2026). https://doi.org/10.1038/s41698-026-01556-1
+> Cui, B., Sun, H., Zhao, S. et al. Deep learning based individualized cross-platform molecular subtype classification of B-lineage acute lymphoblastic leukemia. npj Precis. Onc. (2026). https://doi.org/10.1038/s41698-026-01556-1
 
 # INSTALL
 
